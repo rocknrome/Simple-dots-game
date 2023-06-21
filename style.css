@@ -1,5 +1,7 @@
-/* Elements */
-body {
+/*---
+ * Elements
+ --- */
+ body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -28,7 +30,9 @@ a {
   text-decoration: none;
 }
 
-/* Animations */
+/*---
+ * Animations
+ --- */
 @keyframes blink {
   0%,
   100% {
@@ -58,14 +62,18 @@ a {
   }
 }
 
-/* Base */
+/*---
+ * Base
+ --- */
 .container {
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* Typography */
+/*---
+ * Typography
+ --- */
 .title {
   text-transform: uppercase;
   font-size: 2rem;
@@ -89,7 +97,9 @@ a {
   background-color: #111;
 }
 
-/* Form */
+/*---
+ * Form
+ --- */
 .button {
   padding: 1rem 1.5rem;
   text-transform: uppercase;
@@ -98,7 +108,9 @@ a {
   animation: 2s linear infinite blink;
 }
 
-/* Modules */
+/*---
+ * Modules
+ --- */
 .ball {
   display: block;
   position: absolute;
@@ -112,7 +124,9 @@ a {
   cursor: pointer;
 }
 
-/* Partials */
+/*---
+ * Partials
+ --- */
 .level-header {
   padding: 2rem 0;
 }
@@ -157,18 +171,10 @@ a {
   transition: all 250ms ease;
 }
 
+.level-winner h1 {
+  margin-bottom: 2rem;
+}
+
 .game-over {
   opacity: 1;
   pointer-events: all;
-}
-
-.level-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding-bottom: 1rem;
-}
-
-.level-nav ul {
-  padding
