@@ -1,27 +1,15 @@
-/*
- * DOTS: Level One
- *
- */
-//Global variables setup
+// DOTS: Level One
 let score = 0;
 const ball = document.querySelector('.js-ball');
-let scoreDisplay = document.querySelector('.js-score');
+const scoreDisplay = document.querySelector('.js-score');
 const levelWinner = document.querySelector('.level-winner');
 
-    //console.log(score, ball, scoreDisplay, levelWinner); //checkpoint
-    //console.log(typeof score, typeof ball, typeof scoreDisplay, typeof levelWinner); //checkpoint
-//Functionality
-
-
-
-
-
-//Event listeners
+// Event listener for ball clicks
 ball.addEventListener('click', () => {
-    score = score + 10;
+    score += 10;
     scoreDisplay.innerText = `${score}`;
     if (score === 100) {
         levelWinner.style.opacity = '1';
+        levelWinner.style.pointerEvents = 'auto'; // Enable pointer events
     }
-    //console.log('Ball clicked'); //checkpoint
-  });
+});

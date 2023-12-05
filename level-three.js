@@ -1,30 +1,24 @@
-/*
- * DOTS: Level Three
- *
- */
-//Global variables setup
+// DOTS: Level Three
 let score = 0;
 const balls = document.querySelectorAll('.js-ball');
 const scoreDisplay = document.querySelector('.js-score');
 const levelWinner = document.querySelector('.level-winner');
 
-//functionality
+// Function to handle the ball click event
 function handleBallClick(increment) {
-  score += increment;
-  scoreDisplay.innerText = `${score}`;
-
-  if (score >= 100) {
-    levelWinner.style.opacity = '1';
-  } else {
-    levelWinner.style.opacity = '0'; // Ensure opacity is set to 0 when the condition is not met
-  }
+    score += increment;
+    scoreDisplay.innerText = `${score}`;
+    if (score >= 100) {
+        levelWinner.style.opacity = '1';
+    } else {
+        levelWinner.style.opacity = '0';
+    }
 }
 
-//event listener, parsing to number from string
+// Event listeners for each ball
 balls.forEach((ball) => {
-  const increment = parseInt(ball.dataset.increment);
-
-  ball.addEventListener('click', () => {
-    handleBallClick(increment);
-  });
+    const increment = parseInt(ball.dataset.increment, 10);
+    ball.addEventListener('click', () => {
+        handleBallClick(increment);
+    });
 });

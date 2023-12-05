@@ -13,10 +13,7 @@ main {
   min-height: 100vh;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: 'Play', sans-serif;
   color: red;
 }
@@ -34,11 +31,9 @@ a {
  * Animations
  --- */
 @keyframes blink {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
   }
-
   50% {
     opacity: 0;
   }
@@ -48,15 +43,12 @@ a {
   0% {
     transform: translateX(0);
   }
-
   25% {
     transform: translateX(-300%);
   }
-
   75% {
     transform: translateX(300%);
   }
-
   100% {
     transform: translateX(0);
   }
@@ -79,14 +71,14 @@ a {
   font-size: 2rem;
 }
 
-.title.\--xl-large {
+.title.--xl-large {
   display: block;
   position: relative;
   font-size: 6rem;
   letter-spacing: 10px;
 }
 
-.title.\--xl-large:before {
+.title.--xl-large:before {
   content: '';
   position: absolute;
   left: 0;
@@ -139,13 +131,11 @@ a {
   flex-wrap: nowrap;
 }
 
-.level-header__title,
-.level-header__score {
+.level-header__title, .level-header__score {
   /* width: 40%; */
 }
 
-.level-header h2,
-.level-header h4 {
+.level-header h2, .level-header h4 {
   display: inline;
 }
 
@@ -171,10 +161,31 @@ a {
   transition: all 250ms ease;
 }
 
+.level-winner.game-over {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .level-winner h1 {
   margin-bottom: 2rem;
 }
 
-.game-over {
-  opacity: 1;
-  pointer-events: all;
+.level-footer {
+  /* Add any footer styles here */
+}
+
+.level-nav ul {
+  /* Add navigation list styles here */
+}
+
+.level-nav li {
+  /* Add list item styles here */
+}
+
+/* New Sections */
+.winner-message, .restart-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+
